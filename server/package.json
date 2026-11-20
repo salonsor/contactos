@@ -1,0 +1,32 @@
+{
+  "name": "server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server/src/index.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "migrar": "tsx src/scripts/migrar.ts",
+    "importar": "tsx src/scripts/importar-foto.ts",
+    "importar-sqlite": "tsx src/scripts/importar-sqlite.ts",
+    "demo": "tsx src/scripts/demo.ts",
+    "clave": "tsx src/scripts/clave.ts",
+    "clave-defecto": "tsx src/scripts/clave-defecto.ts",
+    "2fa-restablecer": "tsx src/scripts/doble-factor.ts"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.18.0",
+    "dotenv": "^18.0.8",
+    "exceljs": "^4.4.0",
+    "express": "^5.3.0",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.5",
+    "@types/qrcode": "^1.5.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}

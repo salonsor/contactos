@@ -1,0 +1,22 @@
+node_modules/
+dist/
+.vercel/
+.env
+# Clave de cifrado de los secretos del segundo factor
+.clave-2fa
+*.log
+# Base de datos SQLite (datos personales de contactos): nunca al repositorio
+server/datos/
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+# Las fotos HTML llevan datos personales de contactos: nunca al repositorio
+*.html
+!web/index.html
+# Contexto local para agentes de IA (no se sube al repositorio)
+AGENTS.md
+CLAUDE.md
+CLAUDE.local.md

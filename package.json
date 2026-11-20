@@ -1,0 +1,28 @@
+{
+  "name": "depuracion-contactos",
+  "private": true,
+  "type": "module",
+  "description": "Depuración de contactos comerciales: panel de avance (React + TypeScript + SQLite)",
+  "engines": {
+    "node": "24.x"
+  },
+  "workspaces": [
+    "server",
+    "web"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n api,web -c yellow,cyan \"npm run dev -w server\" \"npm run dev -w web\"",
+    "build": "npm run build -w server && npm run build -w web",
+    "typecheck": "npm run typecheck -w server && npm run typecheck -w web",
+    "db:migrar": "npm run migrar -w server",
+    "db:importar": "npm run importar -w server --",
+    "db:importar-sqlite": "npm run importar-sqlite -w server --",
+    "db:demo": "npm run demo -w server",
+    "db:clave": "npm run clave -w server --",
+    "db:clave-defecto": "npm run clave-defecto -w server --",
+    "db:2fa-restablecer": "npm run 2fa-restablecer -w server --"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6"
+  }
+}
